@@ -331,7 +331,7 @@ API.prototype._upnpServerStarted = function(upnpServer, callback) {
     description : "/description.xml",
     location : locationURL,
     ssdpSig: "Node/" + process.versions.node + " UPnP/1.0 " +
-        "UPnPServer/" + require("./package.json").version
+        "ChinachuUPnPServer/" + require("./package.json").version
   });
   this.ssdpServer = ssdpServer;
 
