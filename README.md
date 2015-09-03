@@ -1,44 +1,9 @@
-# upnpserver
-![upnpserver icon](icon/icon_128.png)
+# Chinachu UPnP Server
+![chinachu icon](icon/icon_128.png)
 
-UpnpServer is a fast and light UPnP server written in NodeJS.
-This version does not need an external database (mysql, mongodb), it stores all information in memory.
+UPnP Server for Chinachu Air.
 
-
-## Compatibility
-
-- Freebox HD
-- Soundbridge
-- ht5streamer 
-- Intel Device Validator
-- Samsung AllShare play
-- LG Smart Share
-- Android
-    - VPlayer (with UPNP Plugin)
-    - NX Player
-
-## Installation
-
-    $ npm install upnpserver
-
-## Command line
-
-For command line, install [upnpserver-cli](https://github.com/oeuillot/upnpserver-cli) package. 
- 
-## API Usage
-
-```javascript
-var Server = require("upnpserver");
-
-var server = new Server({ /* configuration, see below */ }, [
-  '/home/disk1',
-  { path: '/home/myDisk' },
-  { path: '/media/movies', mountPoint: '/My movies'},
-  { path: '/media/albums', mountPoint: '/Personnal/My albums', type: 'music' }
-]);
-
-server.start();
-```
+forked from [oeuillot/upnpserver](https://github.com/oeuillot/upnpserver).
 
 ##Configuration
 Server constructor accepts an optional configuration object. At the moment, the following is supported:
@@ -60,11 +25,3 @@ For testing purposes used *mocha* framework. To run tests, you should do this:
 ```bash
 make test
 ```
-
-## Author
-
-Olivier Oeuillot
-
-## Contributors
-
-https://github.com/oeuillot/upnpserver/graphs/contributors
